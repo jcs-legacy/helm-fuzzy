@@ -44,6 +44,16 @@ If you use `use-package`, you can put these line of codes instead.
     (helm-fuzzy-mode 1)))
 ```
 
+### Inhibit fuzzy matching
+
+You might don't want to fuzzy match some of the action. You can customize 
+`helm-fuzzy-not-allow-fuzzy` variable adding or removing the helm 
+buffer name.
+
+```el
+(setq helm-fuzzy-not-allow-fuzzy '("*helm-ag*"))
+```
+
 
 ## Contribution
 
