@@ -15,7 +15,7 @@
 
 * Work with all `helm` source.
 * Decouple from `helm-source`.
-
+* Uses [flx](https://github.com/lewang/flx).
 
 ## Differences from other alternatives
 
