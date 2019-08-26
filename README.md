@@ -6,16 +6,12 @@
 > Fuzzy matching for helm source.
 
 
-<p align="center">
-  <img src="./screenshot/demo.gif"/>
-</p>
-
-
 ## Featuers
 
 * Work with all `helm` source.
 * Decouple from `helm-source`.
 * Uses [flx](https://github.com/lewang/flx).
+
 
 ## Differences from other alternatives
 
