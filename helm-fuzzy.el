@@ -50,6 +50,18 @@
   "Check if a string IN-STR contain in any string in the string list IN-LIST."
   (cl-some #'(lambda (lb-sub-str) (string-match-p (regexp-quote lb-sub-str) in-str)) in-list))
 
+
+(defun helm-fuzzy--find-pattern ()
+  "Get the raw pattern directly from minibuffer."
+  (let ((pattern "")
+        (pos -1))
+    (when (active-minibuffer-window)
+      (select-window (active-minibuffer-window))
+      (setq pattern (buffer-string))
+      (setq pos (string-match-p helm-pattern pattern))
+      (setq pattern (substring pattern pos (length pattern))))
+    pattern))
+
 (defun helm-fuzzy--sort-candidates (candidates)
   "Fuzzy matching for all CANDIDATES."
   (when (and (not (string= helm-pattern ""))
@@ -57,8 +69,7 @@
     (require 'flx)
     (let* ((scoring-table (make-hash-table))
            (scoring-keys '())
-           (first-sel (nth 0 candidates))
-           (pattern (if (listp first-sel) (cdr first-sel) first-sel)))
+           (pattern (helm-fuzzy--find-pattern)))
       (dolist (cand candidates)
         (let* ((cand-id (if (listp cand) (cdr cand) cand))
                (scoring (flx-score cand-id pattern))
@@ -89,6 +100,7 @@
         cands)
     (setq candidates (helm-fuzzy--sort-candidates candidates))
     candidates))
+
 
 (defun helm-fuzzy--enable ()
   "Enable `helm-fuzzy'."
