@@ -32,6 +32,9 @@
 
 ;;; Code:
 
+(require 'flx)
+(require 'helm)
+
 
 (defgroup helm-fuzzy nil
   "Fuzzy matching for helm source."
@@ -66,7 +69,6 @@
   "Fuzzy matching for all CANDIDATES."
   (when (and (not (string= helm-pattern ""))
              (not (helm-fuzzy--is-contain-list-string helm-fuzzy-not-allow-fuzzy helm-buffer)))
-    (require 'flx)
     (let* ((scoring-table (make-hash-table))
            (scoring-keys '())
            (pattern (helm-fuzzy--find-pattern)))
@@ -104,12 +106,11 @@
 
 (defun helm-fuzzy--enable ()
   "Enable `helm-fuzzy'."
-  (require 'helm)
-  (advice-add 'helm-process-filtered-candidate-transformer :override 'helm-fuzzy--helm-process-filtered-candidate-transformer))
+  (advice-add 'helm-process-filtered-candidate-transformer :override #'helm-fuzzy--helm-process-filtered-candidate-transformer))
 
 (defun helm-fuzzy--disable ()
   "Disable `helm-fuzzy'."
-  (advice-remove 'helm-process-filtered-candidate-transformer 'helm-fuzzy--helm-process-filtered-candidate-transformer))
+  (advice-remove 'helm-process-filtered-candidate-transformer #'helm-fuzzy--helm-process-filtered-candidate-transformer))
 
 ;;;###autoload
 (define-minor-mode helm-fuzzy-mode
