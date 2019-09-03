@@ -59,10 +59,11 @@
   (let ((pattern "")
         (pos -1))
     (when (active-minibuffer-window)
-      (select-window (active-minibuffer-window))
-      (setq pattern (buffer-string))
-      (setq pos (string-match-p helm-pattern pattern))
-      (setq pattern (substring pattern pos (length pattern))))
+      (save-selected-window
+        (select-window (active-minibuffer-window))
+        (setq pattern (buffer-string))
+        (setq pos (string-match-p helm-pattern pattern))
+        (setq pattern (substring pattern pos (length pattern)))))
     pattern))
 
 (defun helm-fuzzy--sort-candidates (candidates)
