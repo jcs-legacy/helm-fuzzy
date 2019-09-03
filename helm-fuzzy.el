@@ -116,7 +116,6 @@
 ;;;###autoload
 (define-minor-mode helm-fuzzy-mode
   "Minor mode 'helm-fuzzy-mode'."
-  :lighter " HelmFuzzy"
   :global t
   :require 'helm-fuzzy
   :group 'helm-fuzzy
