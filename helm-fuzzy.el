@@ -1,4 +1,4 @@
-;;; helm-fuzzy.el --- Fuzzy matching for helm source.  -*- lexical-binding: t; -*-
+;;; helm-fuzzy.el --- Fuzzy matching for helm source  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019  Shen, Jen-Chieh
 ;; Created date 2019-08-26 00:18:09
