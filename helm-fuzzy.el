@@ -35,20 +35,22 @@
 (require 'flx)
 (require 'helm)
 
-
 (defgroup helm-fuzzy nil
   "Fuzzy matching for helm source."
   :prefix "helm-fuzzy-"
   :group 'convenience
   :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/helm-fuzzy"))
 
-
 (defcustom helm-fuzzy-not-allow-fuzzy '("*helm-ag*")
   "List of buffer action that doesn't allow fuzzy."
   :type 'list
   :group 'helm-fuzzy)
 
+;;; Util
 
+(defun helm-fuzzy--is-contain-list-string (in-list in-str)
+  "Check if a string IN-STR contain in any string in the string list IN-LIST."
+  (cl-some #'(lambda (lb-sub-str) (string-match-p (regexp-quote lb-sub-str) in-str)) in-list))
 
 (defun helm-fuzzy--flatten-list (l)
   "Flatten the multiple dimensional array, L to one dimensonal array."
@@ -76,15 +78,11 @@
           t)
       (string= in-face faces))))
 
-(defun helm-fuzzy--is-contain-list-string (in-list in-str)
-  "Check if a string IN-STR contain in any string in the string list IN-LIST."
-  (cl-some #'(lambda (lb-sub-str) (string-match-p (regexp-quote lb-sub-str) in-str)) in-list))
-
+;;; Core
 
 (defun helm-fuzzy--find-pattern ()
   "Get the raw pattern directly from minibuffer."
-  (let ((pattern "")
-        (pos -1))
+  (let ((pattern "") (pos -1))
     (when (active-minibuffer-window)
       (save-selected-window
         (select-window (active-minibuffer-window))
@@ -137,6 +135,7 @@
     (setq candidates (helm-fuzzy--sort-candidates candidates))
     candidates))
 
+;;; Entry
 
 (defun helm-fuzzy--enable ()
   "Enable `helm-fuzzy'."
@@ -152,10 +151,7 @@
   :global t
   :require 'helm-fuzzy
   :group 'helm-fuzzy
-  (if helm-fuzzy-mode
-      (helm-fuzzy--enable)
-    (helm-fuzzy--disable)))
-
+  (if helm-fuzzy-mode (helm-fuzzy--enable) (helm-fuzzy--disable)))
 
 (provide 'helm-fuzzy)
 ;;; helm-fuzzy.el ends here
