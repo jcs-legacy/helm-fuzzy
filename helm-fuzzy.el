@@ -8,7 +8,7 @@
 ;; Keyword: fuzzy helm matching source
 ;; Version: 0.1.5
 ;; Package-Requires: ((emacs "24.4") (helm "1.7.9") (flx "0.5"))
-;; URL: https://github.com/jcs090218/helm-fuzzy
+;; URL: https://github.com/jcs-elpa/helm-fuzzy
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -40,7 +40,7 @@
   "Fuzzy matching for helm source."
   :prefix "helm-fuzzy-"
   :group 'convenience
-  :link '(url-link :tag "Repository" "https://github.com/jcs090218/helm-fuzzy"))
+  :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/helm-fuzzy"))
 
 
 (defcustom helm-fuzzy-not-allow-fuzzy '("*helm-ag*")
