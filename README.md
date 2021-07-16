@@ -1,19 +1,16 @@
-[![Build Status](https://travis-ci.com/jcs090218/helm-fuzzy.svg?branch=master)](https://travis-ci.com/jcs090218/helm-fuzzy)
 [![MELPA](https://melpa.org/packages/helm-fuzzy-badge.svg)](https://melpa.org/#/helm-fuzzy)
 [![MELPA Stable](https://stable.melpa.org/packages/helm-fuzzy-badge.svg)](https://stable.melpa.org/#/helm-fuzzy)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
+[![CI](https://github.com/jcs-elpa/helm-fuzzy/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/helm-fuzzy/actions/workflows/test.yml)
 
 # helm-fuzzy
 > Fuzzy matching for helm source.
-
 
 ## Featuers
 
 * Work with all `helm` source.
 * Decouple from `helm-source`.
 * Uses [flx](https://github.com/lewang/flx).
-
 
 ## Differences from other alternatives
 
@@ -23,7 +20,6 @@
   * Only enhance matching for sources that have fuzzy-matching enabled
 * [helm-fuz](https://github.com/cireu/fuz.el)
   * Uses [fuz.el](https://github.com/cireu/fuz.el).
-
 
 ## Usage
 
@@ -51,7 +47,6 @@ buffer name.
 ```el
 (setq helm-fuzzy-not-allow-fuzzy '("*helm-ag*"))
 ```
-
 
 ## Contribution
 
