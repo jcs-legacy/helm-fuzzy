@@ -1,14 +1,13 @@
 ;;; helm-fuzzy.el --- Fuzzy matching for helm source  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019  Shen, Jen-Chieh
+;; Copyright (C) 2019-2022  Shen, Jen-Chieh
 ;; Created date 2019-08-26 00:18:09
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
-;; Description: Fuzzy matching for helm source.
-;; Keyword: fuzzy helm matching source
+;; URL: https://github.com/jcs-elpa/helm-fuzzy
 ;; Version: 0.1.6
 ;; Package-Requires: ((emacs "24.4") (helm "1.7.9") (flx "0.5"))
-;; URL: https://github.com/jcs-elpa/helm-fuzzy
+;; Keywords: fuzzy helm matching source
 
 ;; This file is NOT part of GNU Emacs.
 

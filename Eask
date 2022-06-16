@@ -2,6 +2,9 @@
          "0.1.6"
          "Fuzzy matching for helm source")
 
+(website-url "https://github.com/jcs-elpa/helm-fuzzy")
+(keywords "fuzzy" "helm" "matching" "source")
+
 (package-file "helm-fuzzy.el")
 
 (source "melpa")
