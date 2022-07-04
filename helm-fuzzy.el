@@ -7,7 +7,7 @@
 ;; URL: https://github.com/jcs-elpa/helm-fuzzy
 ;; Version: 0.1.6
 ;; Package-Requires: ((emacs "24.4") (helm "1.7.9") (flx "0.5"))
-;; Keywords: fuzzy helm matching source
+;; Keywords: matching fuzzy helm source
 
 ;; This file is NOT part of GNU Emacs.
 
