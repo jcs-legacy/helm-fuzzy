@@ -3,7 +3,7 @@
 > This project is looking for maintainers, please open up an issue if you would love to chime in!
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![JCS-ELPA](https://raw.githubusercontent.com/jcs-emacs/badges/master/elpa/v/ivy-describe-modes.svg)](https://jcs-emacs.github.io/jcs-elpa/#/ivy-describe-modes)
+[![JCS-ELPA](https://raw.githubusercontent.com/jcs-emacs/badges/master/elpa/v/helm-fuzzy.svg)](https://jcs-emacs.github.io/jcs-elpa/#/helm-fuzzy)
 
 # helm-fuzzy
 > Fuzzy matching for helm source.
