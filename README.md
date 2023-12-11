@@ -9,7 +9,7 @@
 # helm-fuzzy
 > Fuzzy matching for helm source.
 
-[![CI](https://github.com/jcs-elpa/helm-fuzzy/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/helm-fuzzy/actions/workflows/test.yml)
+[![CI](https://github.com/jcs-legacy/helm-fuzzy/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-legacy/helm-fuzzy/actions/workflows/test.yml)
 
 ## 🏆 Featuers
 
