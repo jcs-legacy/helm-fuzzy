@@ -1,6 +1,6 @@
 ;;; helm-fuzzy.el --- Fuzzy matching for helm source  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019-2022  Shen, Jen-Chieh
+;; Copyright (C) 2019-2024  Shen, Jen-Chieh
 ;; Created date 2019-08-26 00:18:09
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
