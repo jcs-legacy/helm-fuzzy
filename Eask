@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "helm-fuzzy"
          "0.1.6"
          "Fuzzy matching for helm source")
